@@ -1,0 +1,57 @@
+<!-- Optional JavaScript; choose one of the two! -->
+{% extends "layout.html" %}
+
+{% block title %}Welcome to Note App{% endblock %}
+
+{% block content %}
+
+
+<section class="my-jumbotron">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">This is a modified jumbotron <span></span> </h1>
+            <a href="{{ url_for('create') }}" class="btn btn-primary my-button">Create Notes</a>
+        </div>
+    </div>
+</section>
+
+<section class="my-panel">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 my-info-panel">
+                <div class="row">
+                <div class="col-lg">
+                    <img src="{{ url_for('static', filename='img/calming.jfif') }}" alt="Calming" class="float-left">
+                    <h4>Calming</h4>
+                    <p>Example image</p>
+                </div>
+                <div class="col-lg">
+                    <img src="{{ url_for('static', filename='img/cool.jfif') }}" alt="Cool" class="float-left">
+                    <h4>Cool</h4>
+                    <p>Example image</p>
+                </div>
+                <div class="col-lg">
+                    <img src="{{ url_for('static', filename='img/fumino.jpg') }}" alt="Light to the eyes" class="float-left">
+                    <h4>Light to the eyes</h4>
+                    <p>Example image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row my-info-panel2">
+
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='img/cloudy.png') }}" alt="cloudy" class="img-fluid">
+            </div>
+
+            <div class="col-lg-5">
+                <h3>Add your notes here!</h3>
+                <p>Learn to create your own Notes!!</p>
+                <a href="{{ url_for('login') }}" class="btn btn-primary my-button">Find Out</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+<!-- END PANEL -->
